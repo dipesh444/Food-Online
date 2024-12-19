@@ -1,0 +1,6 @@
+<div class="" *ngIf="tags">
+    <a *ngFor="let tag of tags; let i=index"  [class.active]="activeTag(tag)"
+    class="text-decoration-none bg-primary text-white" routerLink="/tag/{{tag.name}}" routerLinkActive="router-link-active" >
+    {{tag.name}} {{tag.count}}
+</a>
+</div>

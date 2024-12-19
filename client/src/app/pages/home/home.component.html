@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <div class="row">
+        <app-search></app-search>
+    </div>
+    <div class="row">
+        <app-tags></app-tags>
+    </div>
+    <div class="row my-2">
+        <div class="col-8 row">
+            <div class="col-4 my-2" *ngFor="let food of foods">
+                <div class="card p-2">
+                    <img src="assets/food.jpg" width="150" height="150" alt="card image">
+                    <div class="card-body">
+                        <h5 class="card-title">{{food.name}}</h5>
+                        <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus cupiditate ipsam ab corrupti </p>
+                        <button class="btn btn-primary" (click)="addToCart(food)">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <app-cart></app-cart>
+        </div>
+    </div>
+</div>

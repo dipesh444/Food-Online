@@ -1,0 +1,8 @@
+<div>
+    <div class="form-group my-3">
+        <div class="d-flex mx-3">
+            <input #s type="text" (keyup.enter)="search(s.value)" class="form-control me-3" placeholder="Search">
+            <button class="btn btn-danger" (click)="search(s.value)">Search</button>
+        </div>
+    </div>
+</div>

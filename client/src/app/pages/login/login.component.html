@@ -1,0 +1,29 @@
+<div class="login mt-5">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <h3 class="text-center">Login</h3>
+                <form [formGroup]="loginForm" (ngSubmit)="save()">
+                    <div class="form-group my-3">
+                        <input type="text" formControlName="email" class="form-control form-control-lg" id="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" formControlName="password" class="form-control form-control-lg" id="password" placeholder="Password">
+                    </div>
+                    <div *ngIf="errorMessage" class="my-3 text-danger">
+                        {{errorMessage}}
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            New User? &nbsp;
+                            <a class="text-decoration-none" routerLink="/register">
+                                Register Here
+                            </a>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
